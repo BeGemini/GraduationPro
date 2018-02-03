@@ -1,0 +1,11 @@
+/Users/apple/Projects/GraduationProject/GraduationCore/bin/Debug/netcoreapp2.0/GraduationCore.deps.json
+/Users/apple/Projects/GraduationProject/GraduationCore/bin/Debug/netcoreapp2.0/GraduationCore.runtimeconfig.json
+/Users/apple/Projects/GraduationProject/GraduationCore/bin/Debug/netcoreapp2.0/GraduationCore.runtimeconfig.dev.json
+/Users/apple/Projects/GraduationProject/GraduationCore/bin/Debug/netcoreapp2.0/GraduationCore.dll
+/Users/apple/Projects/GraduationProject/GraduationCore/bin/Debug/netcoreapp2.0/GraduationCore.pdb
+/Users/apple/Projects/GraduationProject/GraduationCore/obj/Debug/netcoreapp2.0/GraduationCore.csprojResolveAssemblyReference.cache
+/Users/apple/Projects/GraduationProject/GraduationCore/obj/Debug/netcoreapp2.0/GraduationCore.csproj.CoreCompileInputs.cache
+/Users/apple/Projects/GraduationProject/GraduationCore/obj/Debug/netcoreapp2.0/GraduationCore.AssemblyInfoInputs.cache
+/Users/apple/Projects/GraduationProject/GraduationCore/obj/Debug/netcoreapp2.0/GraduationCore.AssemblyInfo.cs
+/Users/apple/Projects/GraduationProject/GraduationCore/obj/Debug/netcoreapp2.0/GraduationCore.dll
+/Users/apple/Projects/GraduationProject/GraduationCore/obj/Debug/netcoreapp2.0/GraduationCore.pdb

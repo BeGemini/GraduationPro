@@ -1,0 +1,228 @@
+﻿@{ ViewData["Title"] = "Home Page"; }
+@using System
+
+@section HeadCSS{
+}
+<div class="page-header clear-filter" filter-color="orange">
+    <div class="page-header-image" data-parallax="true" style="background-image: url('lib/uncleo/assets/img/header.jpg');">
+    </div>
+    <div class="container">
+        <div class="content-center brand">
+            <img class="n-logo" src="lib/uncleo/assets/img/now-logo.png" alt="">
+            <!--<h1 class="h1-seo">Now UI Kit.</h1>-->
+            <h2>长春市 @DateTime.Now.Year.ToString() 年中小学网上报名正式启动！</h2>
+        </div>
+        <div class="category category-absolute">
+            向下继续
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="section section-tabs">
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-12 col-lg-12 col-xl-12">
+                    <!-- ml-auto mr-auto">-->
+                    <p class="category">注意事项</p>
+                    <!-- Nav tabs -->
+                    <div class="card">
+                        <ul class="nav nav-tabs justify-content-center" role="tablist" data-background-color="black" >
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home" role="tab">
+                                    <i class="now-ui-icons objects_umbrella-13"></i> 温馨提示
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#profile" role="tab">
+                                    <i class="now-ui-icons shopping_cart-simple"></i> 报名日程
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
+                                    <i class="now-ui-icons shopping_shop"></i> 监督举报
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="card-body" style="height:400px;OVERFLOW-Y: auto;OVERFLOW-X:hidden;" >
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="home" role="tabpanel">
+                                    <p>
+                                        <span style="font-size: 18px;">
+                                            <strong>尊敬的各位家长：</strong>
+                                        </span>
+                                    </p>
+                                    <p>&nbsp; &nbsp; &nbsp;
+                                        <span style="font-size: 18px;">你们好！长春市2018年中小学报名已经正式开始，朝阳区，南关区，绿园区，双阳区，九台区， 农安县的所有家长们，如果你家孩子符合今年的报名条件，那你一定要在给孩子在网上报名。
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span style="font-size: 18px;">&nbsp; &nbsp; &nbsp; 你的孩子其实不是你的孩子，他们通过你来到这个世界，但并 不属于你；你可以变得像他们一样，但是不要让他们变得像你一样。
+                                            <br/>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span style="font-size: 18px;">此致；
+                                            <br/>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span style="font-size: 18px;">敬礼</span>
+                                    </p>
+                                </div>
+                                <div class="tab-pane" id="profile" role="tabpanel">
+                                    <div class="container">
+                                        <div id="typography">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="typography-line">
+                                                        <h6>
+                                                            <span>2018-05-01 早7:00</span>
+                                                            <p class="text">
+                                                                开始报名第一天
+                                                            </p>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="typography-line">
+                                                        <h6>
+                                                            <span>2018-05-10 晚5:00</span>
+                                                            <p class="text-primary">
+                                                                开始报名第二天
+                                                            </p>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="typography-line">
+                                                        <h6>
+                                                            <span>2018-05-01 早5:00</span>
+                                                            <p class="text-primary">
+                                                                开始报名第三天
+                                                            </p>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="typography-line">
+                                                        <h6>
+                                                            <span>2018-05-01 晚5:00</span>
+                                                            <p class="text-primary">
+                                                                报名结束，可以查询报名结果
+                                                            </p>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="typography-line">
+                                                        <h6>
+                                                            <span class="text-primary">2018-05-01 晚5:00</span>
+                                                            <p class="text-primary">
+                                                                开始派位
+                                                            </p>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="typography-line">
+                                                        <h6>
+                                                            <span>2018-05-01 晚5:00</span>
+                                                            <p class="text-primary">
+                                                                派位结束，各位家长可登录系统进行查询
+                                                            </p>
+                                                        </h6>
+                                                    </div>
+                                                    <div class="typography-line">
+                                                        <h6>
+                                                            <span>2018-05-01 晚5:00</span>
+                                                            <p class="text-primary">
+                                                                流程结束，谢谢大家支持
+                                                            </p>
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane" id="messages" role="tabpanel">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th align="center">教育局</th>
+                                                <th>地址</th>
+                                                <th>监督举报电话</th>
+                                                <th>备注</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>南关区教育局</td>
+                                                <td>南关区南湖大路35号</td>
+                                                <td>0431-3309776</td>
+                                                <td>No Remark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>南关区教育局</td>
+                                                <td>南关区南湖大路35号</td>
+                                                <td>0431-3309776</td>
+                                                <td>No Remark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>南关区教育局</td>
+                                                <td>南关区南湖大路35号</td>
+                                                <td>0431-3309776</td>
+                                                <td>No Remark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>南关区教育局</td>
+                                                <td>南关区南湖大路35号</td>
+                                                <td>0431-3309776</td>
+                                                <td>No Remark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>南关区教育局</td>
+                                                <td>南关区南湖大路35号</td>
+                                                <td>0431-3309776</td>
+                                                <td>No Remark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>南关区教育局</td>
+                                                <td>南关区南湖大路35号</td>
+                                                <td>0431-3309776</td>
+                                                <td>No Remark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>南关区教育局</td>
+                                                <td>南关区南湖大路35号</td>
+                                                <td>0431-3309776</td>
+                                                <td>No Remark</td>
+                                            </tr>
+                                            <tr>
+                                                <td>南关区教育局</td>
+                                                <td>南关区南湖大路35号</td>
+                                                <td>0431-3309776</td>
+                                                <td>No Remark</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="category category-absolute text-center">
+                            <input type="button" class="btn btn-info btn-round" value="下一步"/>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section FootJS{
+<script>
+    $(function(){
+        layer.open({
+        type: 2,
+        title: false,
+        area: ['630px', '360px'],
+        shade: 0.8,
+        closeBtn: 0,
+        shadeClose: true,
+        content: '//player.youku.com/embed/XMjY3MzgzODg0'
+        });
+    });
+</script>
+}
