@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using GraduationCore.Models;
+using GraduationCore.Models.DataModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace GraduationCore.Controllers
 {
@@ -8,6 +10,21 @@ namespace GraduationCore.Controllers
     {
         public IActionResult Index()
         {
+            //DbContextOptions<GDBContext> x=new DbContextOptions<GDBContext>();
+            // GDBContext dBContext=new GDBContext();
+            // var tb =dBContext.Counties;
+            // tb.Add(new Counties(){ID=1,Number="12",Name="南关"});
+            using (var dBContext = new GDBContext())
+            {
+                dBContext.Database.EnsureCreated();
+                var conties=new Counties()
+                {
+                    Number="03",
+                    CName="绿园区"
+                };
+                dBContext.Add(conties);
+                dBContext.SaveChanges();
+            }
             return View();
         }
 

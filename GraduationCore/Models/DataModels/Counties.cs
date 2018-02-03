@@ -6,6 +6,6 @@ namespace GraduationCore.Models.DataModels
 
         public string Number{get;set;}
 
-        public string Name{get;set;}
+        public string CName{get;set;}
     }
 }
