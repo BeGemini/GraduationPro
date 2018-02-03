@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/apple/Projects/GraduationProject/GraduationCore/GraduationCore.csproj",
+      "projectUniqueName": "/Users/apple/Projects/GraduationPro/GraduationCore/GraduationCore.csproj",
       "projectName": "GraduationCore",
-      "projectPath": "/Users/apple/Projects/GraduationProject/GraduationCore/GraduationCore.csproj",
+      "projectPath": "/Users/apple/Projects/GraduationPro/GraduationCore/GraduationCore.csproj",
       "packagesPath": "/Users/apple/.nuget/packages/",
-      "outputPath": "/Users/apple/Projects/GraduationProject/GraduationCore/obj/",
+      "outputPath": "/Users/apple/Projects/GraduationPro/GraduationCore/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
