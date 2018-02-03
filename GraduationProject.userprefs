@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{7CD79878-24F4-4A4B-821B-D4C5731CADFF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GraduationCore/Views/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="GraduationCore/Views/Shared/_Layout.cshtml" Line="20" Column="39" />
+      <File FileName="GraduationCore/Views/Home/Index.cshtml" Line="5" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GraduationCore PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <DisabledProjects>
+    <String>GraduationProject/GraduationProject.csproj</String>
+  </DisabledProjects>
+</Properties>

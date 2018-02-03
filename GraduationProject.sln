@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraduationCore", "GraduationCore\GraduationCore.csproj", "{7CD79878-24F4-4A4B-821B-D4C5731CADFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CD79878-24F4-4A4B-821B-D4C5731CADFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD79878-24F4-4A4B-821B-D4C5731CADFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD79878-24F4-4A4B-821B-D4C5731CADFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD79878-24F4-4A4B-821B-D4C5731CADFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
