@@ -74,7 +74,8 @@
                                     <div class="container">
                                         <div id="typography">
                                             <div class="row">
-                                                <div class="col-md-12">
+                                                <div class="col-md-3"></div>
+                                                <div class="col-md-9">
                                                     <div class="typography-line">
                                                         <h6>
                                                             <span>2018-05-01 早7:00</span>
@@ -86,7 +87,7 @@
                                                     <div class="typography-line">
                                                         <h6>
                                                             <span>2018-05-10 晚5:00</span>
-                                                            <p class="text-primary">
+                                                            <p class="text">
                                                                 开始报名第二天
                                                             </p>
                                                         </h6>
@@ -94,7 +95,7 @@
                                                     <div class="typography-line">
                                                         <h6>
                                                             <span>2018-05-01 早5:00</span>
-                                                            <p class="text-primary">
+                                                            <p class="text">
                                                                 开始报名第三天
                                                             </p>
                                                         </h6>
@@ -102,14 +103,14 @@
                                                     <div class="typography-line">
                                                         <h6>
                                                             <span>2018-05-01 晚5:00</span>
-                                                            <p class="text-primary">
+                                                            <p class="text">
                                                                 报名结束，可以查询报名结果
                                                             </p>
                                                         </h6>
                                                     </div>
                                                     <div class="typography-line">
                                                         <h6>
-                                                            <span class="text-primary">2018-05-01 晚5:00</span>
+                                                            <span class="text-primary">2018-05-01 早12:00-晚5:00</span>
                                                             <p class="text-primary">
                                                                 开始派位
                                                             </p>
@@ -118,7 +119,7 @@
                                                     <div class="typography-line">
                                                         <h6>
                                                             <span>2018-05-01 晚5:00</span>
-                                                            <p class="text-primary">
+                                                            <p class="text">
                                                                 派位结束，各位家长可登录系统进行查询
                                                             </p>
                                                         </h6>
@@ -126,7 +127,7 @@
                                                     <div class="typography-line">
                                                         <h6>
                                                             <span>2018-05-01 晚5:00</span>
-                                                            <p class="text-primary">
+                                                            <p class="text">
                                                                 流程结束，谢谢大家支持
                                                             </p>
                                                         </h6>
@@ -215,10 +216,11 @@
     function showVideo(){
         layer.open({
             type:2,
-            title:'报名操作使用教程',
+            title:false,
             area:['630px','360px'],
             shade:0.8,
             closeBtn:1,
+            shadeClose: true,
             content:'media/sysMedia.mp4'
         });
     }

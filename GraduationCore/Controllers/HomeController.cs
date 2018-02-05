@@ -14,17 +14,17 @@ namespace GraduationCore.Controllers
             // GDBContext dBContext=new GDBContext();
             // var tb =dBContext.Counties;
             // tb.Add(new Counties(){ID=1,Number="12",Name="南关"});
-            using (var dBContext = new GDBContext())
-            {
-                dBContext.Database.EnsureCreated();
-                var conties=new Counties()
-                {
-                    Number="03",
-                    CName="绿园区"
-                };
-                dBContext.Add(conties);
-                dBContext.SaveChanges();
-            }
+            // using (var dBContext = new GDBContext())
+            // {
+            //     dBContext.Database.EnsureCreated();
+            //     var conties=new Counties()
+            //     {
+            //         Number="03",
+            //         CName="绿园区"
+            //     };
+            //     dBContext.Add(conties);
+            //     dBContext.SaveChanges();
+            // }
             return View();
         }
 
