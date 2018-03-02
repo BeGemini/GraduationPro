@@ -12,5 +12,7 @@ namespace GraduationCore.Models.DataModels
         public string PName{get;set;}//学校名称
 
         public int IsDominator{get;set;}//是否优质学校
+
+        public int? EnrollNum{get;set;}//优质招生人数
     }
 }
