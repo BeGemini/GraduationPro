@@ -6,26 +6,19 @@ namespace GraduationCore.Common.Helper
 {
     public class XmlHelper
     {
-        static string BaseDirectory
-        {
-            get
-            {
-                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Common", "Config");
-            }
-        }
-
-        public static object GetXmlInstance<T>(string xmlName)
+        public static object GetXmlInstance<T>(string path)
         {
             XmlSerializer xml = new XmlSerializer(typeof(T));
             try
             {
-                using (TextReader reader = new StreamReader($"{BaseDirectory}/{xmlName}.xml"))
+                using (TextReader reader = new StreamReader(path))
                 {
                     return xml.Deserialize(reader);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Exception e=ex;
                 return null;
             }
         }

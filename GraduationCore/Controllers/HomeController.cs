@@ -1,13 +1,25 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using GraduationCore.Models;
-using GraduationCore.Models.DataModels;
+using GraduationCore.Common.Models.DataModels;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using GraduationCore.Common.Models.ViewModels;
+using GraduationCore.Common.Helper;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace GraduationCore.Controllers
 {
     public class HomeController : Controller
     {
+        //static string ConfigPath=Path.Combine(IHostingEnvironment.)
+        private readonly IHostingEnvironment hostingEnvironment;
+        private readonly string ConfigsPath;
+        public HomeController(IHostingEnvironment _hostingEnvironment)
+        {
+            hostingEnvironment=_hostingEnvironment;
+            ConfigsPath=Path.Combine(hostingEnvironment.ContentRootPath,"Common","Configs");
+        }
         public IActionResult Index()
         {
             //DbContextOptions<GDBContext> x=new DbContextOptions<GDBContext>();
@@ -25,16 +37,24 @@ namespace GraduationCore.Controllers
             //     dBContext.Add(conties);
             //     dBContext.SaveChanges();
             // }
+            //var list=GetEducationBreauList();
+            ViewBag.EducationBreauList=GetEducationBreauList();
+            ViewBag.ApplyScheduleList=GetApplySheduleList();
             return View();
+        }
+
+        private List<EducationBureau> GetEducationBreauList()
+        {
+            return XmlHelper.GetXmlInstance<EducationBureauList>($"{ConfigsPath}/EducationBureau.xml") as List<EducationBureau>;
+        }
+
+        private List<ApplySchedule> GetApplySheduleList()
+        {
+            return XmlHelper.GetXmlInstance<ApplyScheduleList>($"{ConfigsPath}/ApplySchedule.xml")as List<ApplySchedule>;
         }
         public IActionResult IdentityConfirm()
         {
             return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

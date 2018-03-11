@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EducationBureauList>
-    <EducationBureau Name="" Address="" Tel="" Remark="" />
+    <EducationBureau Name="南关区" Address="人民广场" Tel="0431-782212" Remark="" />
+    <EducationBureau Name="南关区" Address="人民广场" Tel="0431-782212" Remark="" />
+    <EducationBureau Name="南关区" Address="人民广场" Tel="0431-782212" Remark="" />
 </EducationBureauList>

@@ -4,6 +4,7 @@
 }
 
 @using System 
+@using GraduationCore.Common.Models.ViewModels
 @section HeadCSS{ 
 }
 <div class="page-header clear-filter" filter-color="orange">
@@ -70,6 +71,17 @@
                                                         </h6>
                                                     </div>
                                                     <!--Schedule-->
+                                                    @{
+                                                        foreach (var item in ViewBag.ApplyScheduleList)
+                                                        {
+                                                            <div class="typography-line">
+                                                                <h6>
+                                                                    <span>@item.BeginTime</span>
+                                                                    <p class="@item.TestClass">@item.Title</p>
+                                                                </h6>
+                                                            </div>
+                                                        }
+                                                    }
                                                 </div>
                                             </div>
                                         </div>
@@ -88,6 +100,17 @@
                                         </thead>
                                         <tbody>
                                             <!--EducationBureau-->
+                                            @{
+                                                foreach (var item in ViewBag.EducationBreauList)
+                                                {
+                                                    <tr>
+                                                        <td>@item.Name</td>
+                                                        <td>@item.Address</td>
+                                                        <td>@item.Tel</td>
+                                                        <td>@item.Remark</td>
+                                                    </tr>
+                                                }
+                                            }
                                         </tbody>
                                     </table>
                                 </div>

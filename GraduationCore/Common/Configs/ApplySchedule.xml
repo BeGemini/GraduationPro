@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScheduleList>
-    <Schedule Title="" DetailDate="" TextClass="" />
-</ScheduleList>
+<ApplyScheduleList>
+    <ApplySchedule Title="开始报名" BeginTime="2018-03-11 08:00:00" EndTime="2018-03-12 18:00:00" />
+    <ApplySchedule Title="结束报名" BeginTime="2018-03-13 08:00:00" EndTime="2018-03-20 18:00:00" />
+</ApplyScheduleList>

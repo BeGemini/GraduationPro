@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using GraduationCore.Models.DataModels;
+using GraduationCore.Common.Models.DataModels;
 using MySql.Data.EntityFrameworkCore.Extensions;
 using Microsoft.EntityFrameworkCore;
 
