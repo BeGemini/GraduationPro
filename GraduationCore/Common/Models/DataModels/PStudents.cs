@@ -1,5 +1,5 @@
 using System;
-namespace GraduationCore.Models.DataModels
+namespace GraduationCore.Common.Models.DataModels
 {
     //原始报名数据，不对此表做修改
     public class PStudents

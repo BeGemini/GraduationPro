@@ -1,5 +1,5 @@
 using System;
-namespace GraduationCore.Models.DataModels
+namespace GraduationCore.Common.Models.DataModels
 {
     //小学优质学生报名表
     public class PDominatorApplyStudents

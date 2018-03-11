@@ -2,7 +2,7 @@ using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using MySql.Data.EntityFrameworkCore.Extensions;
 
-namespace GraduationCore.Models.DataModels
+namespace GraduationCore.Common.Models.DataModels
 {
     public class GDBContext:DbContext
     {

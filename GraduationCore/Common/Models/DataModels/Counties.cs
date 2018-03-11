@@ -1,4 +1,4 @@
-namespace GraduationCore.Models.DataModels
+namespace GraduationCore.Common.Models.DataModels
 {
     public class Counties
     {

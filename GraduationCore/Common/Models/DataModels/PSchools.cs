@@ -1,5 +1,5 @@
 using System;
-namespace GraduationCore.Models.DataModels
+namespace GraduationCore.Common.Models.DataModels
 {
     public class PSchools
     {
