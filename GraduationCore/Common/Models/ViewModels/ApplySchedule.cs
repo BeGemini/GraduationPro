@@ -17,11 +17,14 @@ namespace GraduationCore.Common.Models.ViewModels
         public string BeginTime { get; set; }
         [XmlAttribute]
         public string EndTime { get; set; }
+        //private DateTime beginTime=Convert.ToDateTime(BeginTime);
         public string TextClass
         {
             get
             {
-                if (DateTime.Compare(DateTime.Now.AddDays(-1), DateTime.Now) > 0)
+                DateTime begin = Convert.ToDateTime(BeginTime);
+                DateTime end = Convert.ToDateTime(EndTime);
+                if (DateTime.Compare(DateTime.Now, begin) > 0 && DateTime.Compare(DateTime.Now, end) < 0)
                     return "text-primary";
                 else
                     return "text";

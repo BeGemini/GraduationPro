@@ -55,6 +55,7 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="home" role="tabpanel">
                                     <!--warm prompt-->
+                                    @Html.Raw(ViewBag.WarmPrompt.Content)
                                 </div>
                                 <div class="tab-pane" id="profile" role="tabpanel">
                                     <div class="container">
@@ -62,14 +63,6 @@
                                             <div class="row">
                                                 <div class="col-md-3"></div>
                                                 <div class="col-md-9">
-                                                    <div class="typography-line">
-                                                        <h6>
-                                                            <span>2018-05-01 早7:00</span>
-                                                            <p class="text">
-                                                                开始报名第一天
-                                                            </p>
-                                                        </h6>
-                                                    </div>
                                                     <!--Schedule-->
                                                     @{
                                                         foreach (var item in ViewBag.ApplyScheduleList)
@@ -77,7 +70,7 @@
                                                             <div class="typography-line">
                                                                 <h6>
                                                                     <span>@item.BeginTime</span>
-                                                                    <p class="@item.TestClass">@item.Title</p>
+                                                                    <p class="@item.TextClass">@item.Title</p>
                                                                 </h6>
                                                             </div>
                                                         }
