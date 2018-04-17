@@ -1,14 +1,23 @@
-public class ResultData<T>
+namespace GraduationCore.Common.Models.ViewModels
 {
-    public ResultData()
+    public enum ResultMessage
     {
-        Code=200;
-        Msg=string.Empty;
+        Error=0,
+        Success
     }
+    public class ResultData<T>
+    {
 
-    public int Code{get;set;}//返回码
 
-    public T Data{get;set;}//返回数据
+        public ResultData()
+        {
+            MsgDetail = string.Empty;
+        }
 
-    public string Msg{get;set;}//返回消息
+        public T Data { get; set; }//返回数据
+
+        public ResultMessage Msg { get; set; }//返回状态
+
+        public string MsgDetail { get; set; }
+    }
 }

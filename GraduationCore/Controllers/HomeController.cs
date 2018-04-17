@@ -13,7 +13,6 @@ namespace GraduationCore.Controllers
 {
     public class HomeController : Controller
     {
-        //static string ConfigPath=Path.Combine(IHostingEnvironment.)
         private readonly IHostingEnvironment hostingEnvironment;
         private readonly string ConfigsPath;
         public HomeController(IHostingEnvironment _hostingEnvironment)
@@ -61,17 +60,6 @@ namespace GraduationCore.Controllers
         public IActionResult IdentityConfirm()
         {
             return View();
-        }
-
-        public IActionResult JudgeTurePage(string idNumber)
-        {
-            if(idNumber.Length!=18)
-            {
-                return  Json(new ResultData<string>(){Msg="the idNumberLength is not enough long ",Data="Error"}) ;
-            }
-            //622426199604082718
-            int year=int.Parse(idNumber.Substring(6,4));
-            return Json("Error");
         }
     }
 }
