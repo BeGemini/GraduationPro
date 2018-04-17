@@ -1,12 +1,8 @@
 ﻿@{ ViewData["Title"] = "Home Page"; } 
-@{
-    Layout = "_Layout";
-}
-
+@{ Layout = "_Layout"; } 
 @using System 
 @using GraduationCore.Common.Models.ViewModels
-@section HeadCSS{ 
-}
+@section HeadCSS{ }
 <div class="page-header clear-filter" filter-color="orange">
     <div class="page-header-image" data-parallax="true" style="background-image: url('lib/uncleo/assets/img/header.jpg');">
     </div>
@@ -18,125 +14,128 @@
             <br/>
             <input type="button" class="btn btn-primary" value="观看使用教程" onclick="showVideo()" />
         </div>
-        <div class="category category-absolute">
+        <h6 class="category category-absolute">
             向下继续
-        </div>
+        </h6>
     </div>
 </div>
 
-<div class="main">
-    <div class="section section-tabs">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-xl-12">
-                    <!-- ml-auto mr-auto">-->
-                    <p class="category">注意事项</p>
-                    <!-- Nav tabs -->
-                    <div class="card">
-                        <ul class="nav nav-tabs justify-content-center" role="tablist" data-background-color="black">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#home" role="tab">
-                                    <i class="now-ui-icons objects_umbrella-13"></i> 温馨提示
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#profile" role="tab">
-                                    <i class="now-ui-icons shopping_cart-simple"></i> 报名日程
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
-                                    <i class="now-ui-icons shopping_shop"></i> 监督举报
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="card-body" style="height:400px;OVERFLOW-Y: auto;OVERFLOW-X:hidden;">
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="home" role="tabpanel">
-                                    <!--warm prompt-->
-                                    @Html.Raw(ViewBag.WarmPrompt.Content)
-                                </div>
-                                <div class="tab-pane" id="profile" role="tabpanel">
-                                    <div class="container">
-                                        <div id="typography">
-                                            <div class="row">
-                                                <div class="col-md-3"></div>
-                                                <div class="col-md-9">
-                                                    <!--Schedule-->
-                                                    @{
-                                                        foreach (var item in ViewBag.ApplyScheduleList)
-                                                        {
-                                                            <div class="typography-line">
-                                                                <h6>
-                                                                    <span>@item.BeginTime</span>
-                                                                    <p class="@item.TextClass">@item.Title</p>
-                                                                </h6>
-                                                            </div>
-                                                        }
-                                                    }
+<!-- <div class="main"> -->
+<div class="section section-signup" style="background-image: url('lib/uncleo/assets/img/bg11.jpg');background-size: cover; background-position: top center; min-height: 700px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <!-- ml-auto mr-auto">-->
+                <p class="category">&nbsp;</p>
+                <p class="category">&nbsp;</p>
+                <!-- Nav tabs -->
+                <div class="card">
+                    <ul class="nav nav-tabs justify-content-center" role="tablist" data-background-color="black">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#home" role="tab">
+                                <i class="now-ui-icons objects_umbrella-13"></i> 温馨提示
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab">
+                                <i class="now-ui-icons shopping_cart-simple"></i> 报名日程
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
+                                <i class="now-ui-icons shopping_shop"></i> 监督举报
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="card-body" style="height:400px;OVERFLOW-Y: auto;OVERFLOW-X:hidden;">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="home" role="tabpanel">
+                                <!--warm prompt-->
+                                @Html.Raw(ViewBag.WarmPrompt.Content)
+                            </div>
+                            <div class="tab-pane" id="profile" role="tabpanel">
+                                <div class="container">
+                                    <div id="typography">
+                                        <div class="row">
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-9">
+                                                <!--Schedule-->
+                                                @{ foreach (var item in ViewBag.ApplyScheduleList) {
+                                                <div class="typography-line">
+                                                    <h6>
+                                                        <span>@item.BeginTime</span>
+                                                        <p class="@item.TextClass">@item.Title</p>
+                                                    </h6>
                                                 </div>
+                                                } }
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                </div>
-                                <div class="tab-pane" id="messages" role="tabpanel">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th align="center">教育局</th>
-                                                <th>地址</th>
-                                                <th>监督举报电话</th>
-                                                <th>备注</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!--EducationBureau-->
-                                            @{
-                                                foreach (var item in ViewBag.EducationBreauList)
-                                                {
-                                                    <tr>
-                                                        <td>@item.Name</td>
-                                                        <td>@item.Address</td>
-                                                        <td>@item.Tel</td>
-                                                        <td>@item.Remark</td>
-                                                    </tr>
-                                                }
-                                            }
-                                        </tbody>
-                                    </table>
-                                </div>
+                            </div>
+                            <div class="tab-pane" id="messages" role="tabpanel">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th align="center">教育局</th>
+                                            <th>地址</th>
+                                            <th>监督举报电话</th>
+                                            <th>备注</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--EducationBureau-->
+                                        @{ foreach (var item in ViewBag.EducationBreauList) {
+                                        <tr>
+                                            <td>@item.Name</td>
+                                            <td>@item.Address</td>
+                                            <td>@item.Tel</td>
+                                            <td>@item.Remark</td>
+                                        </tr>
+                                        } }
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        <div class="category category-absolute text-center">
-                            <input type="button" class="btn btn-info btn-round" value="下一步" onclick="nextStep()" />
-                        </div>
+                    </div>
+                    <div class="category category-absolute text-center">
+                            <button class="btn btn-info btn-round" data-toggle="modal" data-target="#myModal">下一步</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Sart Modal -->
-<div class="modal fade" id="nextStep" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- </div> -->
+<!-- Sart Modal 可以单独写一个页面-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                     <i class="now-ui-icons ui-1_simple-remove"></i>
                 </button>
-                <h4 class="title title-up">Modal title</h4>
+                <h4 class="title title-up">确认基本信息</h4>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="button" class="btn btn-primary btn-round" value="确定" />
-                    </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="now-ui-icons users_single-02"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="请输入你的身份证号">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="now-ui-icons users_single-02"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="请再次输入你的身份证号">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" hidden="hidden"></button>
+                <button type="button" class="btn btn-danger">确定</button>
             </div>
         </div>
     </div>
@@ -155,13 +154,13 @@
             content: 'media/sysMedia.mp4'
         });
     }
-    function nextStep() {
-        layer.open({
-            type: 2,
-            area: ['700px', '450px'],
-            fixed: false, //不固定
-            maxmin: false,
-            content: 'Home/IdentityConfirm'
-        });
-    }
+    // function nextStep() {
+    //     layer.open({
+    //         type: 2,
+    //         area: ['700px', '450px'],
+    //         fixed: false, //不固定
+    //         maxmin: false,
+    //         content: 'Home/IdentityConfirm'
+    //     });
+    // }
 </script> }

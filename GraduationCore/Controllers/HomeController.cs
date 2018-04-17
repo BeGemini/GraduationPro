@@ -27,17 +27,17 @@ namespace GraduationCore.Controllers
             // GDBContext dBContext=new GDBContext();
             // var tb =dBContext.Counties;
             // tb.Add(new Counties(){ID=1,Number="12",Name="南关"});
-            using (var dBContext = new GDBContext())
-            {
-                dBContext.Database.EnsureCreated();
-                var conties=new Counties()
-                {
-                    Number="03",
-                    CName="绿园区"
-                };
-                dBContext.Add(conties);
-                dBContext.SaveChanges();
-            }
+            // using (var dBContext = new GDBContext())
+            // {
+            //     dBContext.Database.EnsureCreated();
+            //     var conties=new Counties()
+            //     {
+            //         Number="03",
+            //         CName="绿园区"
+            //     };
+            //     dBContext.Add(conties);
+            //     dBContext.SaveChanges();
+            // }
             //var list=GetEducationBreauList();
             ViewBag.WarmPrompt=GetWarmPrompt();
             ViewBag.ApplyScheduleList=GetApplySheduleList();
@@ -61,6 +61,17 @@ namespace GraduationCore.Controllers
         public IActionResult IdentityConfirm()
         {
             return View();
+        }
+
+        public IActionResult JudgeTurePage(string idNumber)
+        {
+            if(idNumber.Length!=18)
+            {
+                return  Json(new ResultData<string>(){Msg="the idNumberLength is not enough long ",Data="Error"}) ;
+            }
+            //622426199604082718
+            int year=int.Parse(idNumber.Substring(6,4));
+            return Json("Error");
         }
     }
 }
