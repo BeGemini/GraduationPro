@@ -18,25 +18,28 @@ namespace GraduationCore.Common.Helper
         //验证身份证
         public static bool CheckIdNumber(string idNumber)
         {
-            Match match = Regex.Match(idNumber, IdNumberRegular18);
-            return match == null ? false : true;
+            MatchCollection matchCollection = Regex.Matches(idNumber, IdNumberRegular18);
+            return matchCollection.Count == 0 ? false : true;
         }
 
         //验证手机号
         public static bool CheckMobileNumber(string mobileNumber)
         {
-            return false;
+            MatchCollection matchCollection = Regex.Matches(mobileNumber, IdNumberRegular18);
+            return matchCollection.Count == 0 ? false : true;
         }
 
         //验证电话号
         public static bool CheckPhoneNumber(string phoneNumber)
         {
-            return false;
+            MatchCollection matchCollection = Regex.Matches(phoneNumber, IdNumberRegular18);
+            return matchCollection.Count == 0 ? false : true;
         }
 
         public static bool CheckMail(string mail)
         {
-            return false;
+            MatchCollection matchCollection = Regex.Matches(mail, IdNumberRegular18);
+            return matchCollection.Count == 0 ? false : true;
         }
     }
 }
