@@ -16,9 +16,14 @@ namespace GraduationCore.Common.Helper
         //固话正则表达式
         private static readonly string PhoneRegular = @"/^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/";
         //验证身份证
-        public static bool CheckIdNumber(string idNumber)
+        public static bool CheckIdNumber18(string idNumber)
         {
             MatchCollection matchCollection = Regex.Matches(idNumber, IdNumberRegular18);
+            return matchCollection.Count == 0 ? false : true;
+        }
+        public static bool CheckIdNumber15(string idNumber)
+        {
+            MatchCollection matchCollection = Regex.Matches(idNumber, IdNumberRegular15);
             return matchCollection.Count == 0 ? false : true;
         }
 

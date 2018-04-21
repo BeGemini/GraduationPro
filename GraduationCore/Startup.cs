@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using GraduationCore.Common.Models.DataModels;
 using MySql.Data.EntityFrameworkCore.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 
 namespace GraduationCore
 {
@@ -37,7 +39,6 @@ namespace GraduationCore
             }
 
             app.UseStaticFiles();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

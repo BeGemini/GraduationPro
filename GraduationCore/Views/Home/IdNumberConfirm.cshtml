@@ -1,0 +1,45 @@
+@Html.Partial("_LayoutCSS")
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                </button>
+                <h4 class="title title-up">确认基本信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="now-ui-icons users_single-02"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="请输入你的身份证号" id="idNumber" onfocus="hideDiv()" />
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="now-ui-icons users_single-02"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="请再次输入你的身份证号" id="idNumberRepeat" onfocus="hideDiv()">
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-info" onclick="CheckIdNumber()">确定</button>
+            </div>
+            <div class="alert alert-danger" role="alert" id="wholeTip">
+                <div class="container">
+                    <div class="alert-icon">
+                        <i class="now-ui-icons objects_support-17"></i>
+                    </div>
+                    <strong>错误！</strong><span id="tipContent"></span>
+                    <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">
+                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                        </span>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_LayoutJS")
+<script src="~/js/Home/IdNumberConfirm.js"></script>

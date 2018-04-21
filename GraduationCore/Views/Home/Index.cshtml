@@ -110,36 +110,7 @@
 </div>
 <!-- </div> -->
 <!-- Sart Modal 可以单独写一个页面-->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header justify-content-center">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    <i class="now-ui-icons ui-1_simple-remove"></i>
-                </button>
-                <h4 class="title title-up">确认基本信息</h4>
-            </div>
-            <div class="modal-body">
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <i class="now-ui-icons users_single-02"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="请输入你的身份证号">
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <i class="now-ui-icons users_single-02"></i>
-                    </span>
-                    <input type="text" class="form-control" placeholder="请再次输入你的身份证号">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" hidden="hidden"></button>
-                <button type="button" class="btn btn-danger">确定</button>
-            </div>
-        </div>
-    </div>
-</div>
+@Html.Partial("IdNumberConfirm")
 <!--  End Modal -->
 @section FootJS{
 <script>
@@ -154,13 +125,4 @@
             content: 'media/sysMedia.mp4'
         });
     }
-    // function nextStep() {
-    //     layer.open({
-    //         type: 2,
-    //         area: ['700px', '450px'],
-    //         fixed: false, //不固定
-    //         maxmin: false,
-    //         content: 'Home/IdentityConfirm'
-    //     });
-    // }
 </script> }
