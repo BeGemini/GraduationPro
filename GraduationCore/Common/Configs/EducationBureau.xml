@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EducationBureauList>
-    <EducationBureau Name="南关区" Address="人民广场" Tel="0431-782212" Remark="" />
-    <EducationBureau Name="南关区" Address="人民广场" Tel="0431-782212" Remark="" />
-    <EducationBureau Name="南关区" Address="人民广场" Tel="0431-782212" Remark="" />
+    <EducationBureau Name="朝阳区" WebName="朝阳教育信息网" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
+    <EducationBureau Name="南关区" WebName="南关教育网" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
+    <EducationBureau Name="宽城区" WebName="宽城区教育信息网" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
+    <EducationBureau Name="二道区" WebName="二道区教育局" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
+    <EducationBureau Name="绿园区" WebName="绿园区教育信息网" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
+    <EducationBureau Name="经开区" WebName="长春经济技术开发区文教局" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
+    <EducationBureau Name="长春新区" WebName="长春新区政务网" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
+    <EducationBureau Name="净月区" WebName="长春净月高新技术产业开发区" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
+    <EducationBureau Name="汽车区" WebName="长春汽车经济技术开发区教育网" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
+    <EducationBureau Name="莲花山区" WebName="长春莲花山生态旅游度假区" WebLink="www.baidu.com" ConsultNum="0431-782212" SuperviseNum="0431-782212" Remark="" />
 </EducationBureauList>

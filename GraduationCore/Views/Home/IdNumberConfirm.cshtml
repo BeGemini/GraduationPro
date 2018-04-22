@@ -21,6 +21,28 @@
                     </span>
                     <input type="text" class="form-control" placeholder="请再次输入你的身份证号" id="idNumberRepeat" onfocus="hideDiv()">
                 </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="radio">
+                                <input type="radio" name="radio1" id="radio1" value="option1">
+                                <label for="radio1" data-toggle="tooltip" data-placement="bottom" title="不包含双阳区、九台区、榆树市、农安县、德惠市" data-container="body" data-animation="true"
+                                    data-delay="100">
+                                    本市户籍人口
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="radio">
+                                <input type="radio" name="radio1" id="radio2" value="option1">
+                                <label for="radio2" data-toggle="tooltip" data-placement="bottom" title="须持有本市有效居住证" data-container="body" data-animation="true"
+                                    data-delay="100">
+                                    非本市户籍人口
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer text-center">
                 <button type="button" class="btn btn-info" onclick="CheckIdNumber()">确定</button>
@@ -30,12 +52,8 @@
                     <div class="alert-icon">
                         <i class="now-ui-icons objects_support-17"></i>
                     </div>
-                    <strong>错误！</strong><span id="tipContent"></span>
-                    <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">
-                            <i class="now-ui-icons ui-1_simple-remove"></i>
-                        </span>
-                    </button> -->
+                    <strong>错误！</strong>
+                    <span id="tipContent"></span>
                 </div>
             </div>
         </div>

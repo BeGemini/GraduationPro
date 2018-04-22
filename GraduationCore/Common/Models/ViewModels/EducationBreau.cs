@@ -13,9 +13,15 @@ namespace GraduationCore.Common.Models.ViewModels
         [XmlAttribute]
         public string Name{get;set;}
         [XmlAttribute]
-        public string Address{get;set;}
+        public string WebName{get;set;}
         [XmlAttribute]
-        public string Tel{get;set;}
+        public string WebLink{get;set;}
+        //咨询电话
+        [XmlAttribute]
+        public string ConsultNum{get;set;}
+        //监督举电话
+        [XmlAttribute]
+        public string SuperviseNum{get;set;}
         [XmlAttribute]
         public string Remark{get;set;}
     }

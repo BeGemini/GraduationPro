@@ -29,25 +29,21 @@ public class ApplyController : Controller
                 else
                 {
                     result.Status=ResultStauts.Success;
-                    result.Data=$"/Apply/MiddleApply?idNumber={idNumber}";
+                    result.Data=$"/Apply/ApplyPage?idNumber={DESEncryptHelper.DesEncrypt(idNumber)}";
                 }
             }
             else
             {
                 result.Status=ResultStauts.Error;
-                result.Msg="身份证错误，请核实！";
+                result.Msg="身份证号错误，请核实！";
             }
         }
         return Json(result);
     }
 
-    public IActionResult MiddleApply(string idNumber)
+    public IActionResult ApplyPage(string idNumber)
     {
-        return View();
-    }
-
-    public IActionResult PrimaryApply(string idNumber)
-    {
+        idNumber=DESEncryptHelper.DesDecrypt(idNumber);
         return View();
     }
 }

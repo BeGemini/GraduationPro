@@ -2371,7 +2371,7 @@ fieldset[disabled] .btn-link.active {
     background-color: #FFFFFF;
 }
 
-.has-success:after,
+/* .has-success:after,
 .has-danger:after {
     font-family: 'Nucleo Outline';
     content: "\ea22";
@@ -2381,7 +2381,7 @@ fieldset[disabled] .btn-link.active {
     bottom: 10px;
     color: #18ce0f;
     font-size: 11px;
-}
+} */
 
 .has-success.input-lg:after,
 .has-danger.input-lg:after {
@@ -5405,10 +5405,10 @@ Created using IcoMoon - icomoon.io
     color: #FFFFFF;
 }
 
-.login-page .card-login.card-plain .has-success:after,
+/* .login-page .card-login.card-plain .has-success:after,
 .login-page .card-login.card-plain .has-danger:after {
     color: #FFFFFF;
-}
+} */
 
 .login-page .card-login.card-plain .has-danger .form-control {
     background-color: transparent;
@@ -5890,10 +5890,10 @@ Created using IcoMoon - icomoon.io
     color: #FFFFFF;
 }
 
-[data-background-color] .has-success:after,
+/* [data-background-color] .has-success:after,
 [data-background-color] .has-danger:after {
     color: #FFFFFF;
-}
+} */
 
 [data-background-color] .has-danger .form-control {
     background-color: transparent;

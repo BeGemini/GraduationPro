@@ -37,7 +37,8 @@ namespace GraduationCore.Controllers
             //     dBContext.Add(conties);
             //     dBContext.SaveChanges();
             // }
-            //var list=GetEducationBreauList();
+            // var list=GetEducationBreauList();
+            // ViewData[""]
             ViewBag.WarmPrompt=GetWarmPrompt();
             ViewBag.ApplyScheduleList=GetApplySheduleList();
             ViewBag.EducationBreauList=GetEducationBreauList();

@@ -79,10 +79,10 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th align="center">教育局</th>
-                                            <th>地址</th>
+                                            <th align="center">区</th>
+                                            <th>各区网站</th>
+                                            <th>咨询电话</th>
                                             <th>监督举报电话</th>
-                                            <th>备注</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -90,9 +90,9 @@
                                         @{ foreach (var item in ViewBag.EducationBreauList) {
                                         <tr>
                                             <td>@item.Name</td>
-                                            <td>@item.Address</td>
-                                            <td>@item.Tel</td>
-                                            <td>@item.Remark</td>
+                                            <td><a href="@item.WebLink">@item.WebName</a></td>
+                                            <td>@item.ConsultNum</td>
+                                            <td>@item.SuperviseNum</td>
                                         </tr>
                                         } }
                                     </tbody>

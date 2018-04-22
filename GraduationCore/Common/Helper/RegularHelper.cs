@@ -30,20 +30,20 @@ namespace GraduationCore.Common.Helper
         //验证手机号
         public static bool CheckMobileNumber(string mobileNumber)
         {
-            MatchCollection matchCollection = Regex.Matches(mobileNumber, IdNumberRegular18);
+            MatchCollection matchCollection = Regex.Matches(mobileNumber, MobileRagular);
             return matchCollection.Count == 0 ? false : true;
         }
 
         //验证电话号
         public static bool CheckPhoneNumber(string phoneNumber)
         {
-            MatchCollection matchCollection = Regex.Matches(phoneNumber, IdNumberRegular18);
+            MatchCollection matchCollection = Regex.Matches(phoneNumber, PhoneRegular);
             return matchCollection.Count == 0 ? false : true;
         }
 
         public static bool CheckMail(string mail)
         {
-            MatchCollection matchCollection = Regex.Matches(mail, IdNumberRegular18);
+            MatchCollection matchCollection = Regex.Matches(mail, MailRegular);
             return matchCollection.Count == 0 ? false : true;
         }
     }
