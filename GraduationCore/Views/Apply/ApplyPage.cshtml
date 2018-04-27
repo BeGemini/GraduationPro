@@ -1,5 +1,9 @@
 @{ Layout = "_LayoutNormal"; } 
 @section HeadCSS{ }
+@using GraduationCore.Common.Models.ViewModels;
+@{
+    var item=ViewData["idNum"] as IdNumber;
+}
 <div class="section" style="background-size: cover; background-position: top center; min-height: 700px; background-color: GhostWhite">
     <!-- ackground-image: url('../lib/uncleo/assets/img/bg11.jpg');  -->
     <div class="container">
@@ -16,16 +20,10 @@
                                     <div class="col-md-8">
                                         <input type="input" class="form-control" id="sName" placeholder="请输入姓名" />
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="alert alert-danger" role="alert" id="wholeTip" hidden="hidden">
-                                            <div class="container">
-                                                <div class="alert-icon">
-                                                    <i class="now-ui-icons objects_support-17"></i>
-                                                </div>
-                                                <strong>错误！</strong>
-                                                <span id="tipContent">123</span>
-                                            </div>
-                                        </div>
+                                    <div class="col-md-4 has-primary">
+                                        <label class="control-label">
+                                            <i class="now-ui-icons objects_support-17"></i>错误！
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -33,7 +31,7 @@
                                 <label for="sId">身份证号</label>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <input type="input" class="form-control" id="sId" disabled="" value="622426199604082718" />
+                                        <input type="input" class="form-control" id="sId" disabled="" value=@item.IdNum />
                                     </div>
                                     <div class="col-md-4 has-success">
                                         <label class="control-label">
@@ -46,7 +44,7 @@
                                 <label for="sSex">性别</label>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <label class="form-control" id="sSex" disabled="">男</label>
+                                        <label class="form-control" id="sSex" disabled="">@(item.Sex==1?"男":"女")</label>
                                     </div>
                                     <div class="col-md-4 has-success">
                                         <label class="control-label">
@@ -59,7 +57,7 @@
                                 <label for="sBirth">出生日期</label>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <label class="form-control" id="sBirth" disabled="">1996-04-08</label>
+                                        <label class="form-control" id="sBirth" disabled="">@item.BirthDay</label>
                                     </div>
                                     <div class="col-md-4 has-success">
                                         <label class="control-label">
@@ -94,7 +92,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id="div_address">
                                 <label for="sPhone">现居住地</label>
                                 <div class="row">
                                     <div class="col-md-3">
