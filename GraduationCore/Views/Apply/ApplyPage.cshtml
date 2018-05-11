@@ -1,9 +1,7 @@
 @{ Layout = "_LayoutNormal"; } 
-@section HeadCSS{ }
+@section HeadCSS{ } 
 @using GraduationCore.Common.Models.ViewModels;
-@{
-    var item=ViewData["idNum"] as IdNumber;
-}
+@{ var item=ViewData["idNum"] as IdNumber; }
 <div class="section" style="background-size: cover; background-position: top center; min-height: 700px; background-color: GhostWhite">
     <!-- ackground-image: url('../lib/uncleo/assets/img/bg11.jpg');  -->
     <div class="container">
@@ -12,127 +10,129 @@
             <div class="card card-text" style="background-color:white; ">
                 <div class="card-body">
                     <dvi class="row">
-                        <div class="col-md-3"></div>
+                        <div class="col-md-2"></div>
                         <div class="col-md-7">
-                            <div class="form-group">
-                                <label for="sName">姓名</label>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <input type="input" class="form-control" id="sName" placeholder="请输入姓名" />
-                                    </div>
-                                    <div class="col-md-4 has-primary">
-                                        <label class="control-label">
-                                            <i class="now-ui-icons objects_support-17"></i>错误！
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="sId">身份证号</label>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <input type="input" class="form-control" id="sId" disabled="" value=@item.IdNum />
-                                    </div>
-                                    <div class="col-md-4 has-success">
-                                        <label class="control-label">
-                                            <i class="now-ui-icons ui-2_like"></i>正确！
-                                        </label>
+                            <form id="form_stu">
+                                <div class="form-group">
+                                    <label for="sName">姓名</label>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <input type="input" class="form-control" name="SName" id="sName" placeholder="请输入姓名" />
+                                        </div>
+                                        <div class="col-md-4 btn-link btn-danger">
+                                            <label class="control-label">
+                                                <i class="now-ui-icons objects_support-17"></i>错误！
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="sSex">性别</label>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <label class="form-control" id="sSex" disabled="">@(item.Sex==1?"男":"女")</label>
-                                    </div>
-                                    <div class="col-md-4 has-success">
-                                        <label class="control-label">
-                                            <i class="now-ui-icons ui-2_like"></i>正确！
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="sBirth">出生日期</label>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <label class="form-control" id="sBirth" disabled="">@item.BirthDay</label>
-                                    </div>
-                                    <div class="col-md-4 has-success">
-                                        <label class="control-label">
-                                            <i class="now-ui-icons ui-2_like"></i>正确！
-                                        </label>
+                                <div class="form-group">
+                                    <label for="sId">身份证号</label>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <input type="input" class="form-control" name="SIdentity" id="sId" disabled="" value=@item.IdNum />
+                                        </div>
+                                        <div class="col-md-4 has-success">
+                                            <label class="control-label">
+                                                <i class="now-ui-icons ui-2_like"></i>正确！
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="sContact">联系人</label>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <input type="input" class="form-control" id="sContact" placeholder="请输入联系人姓名" />
-                                    </div>
-                                    <div class="col-md-4 has-success">
-                                        <label class="control-label">
-                                            <i class="now-ui-icons ui-2_like"></i>正确！
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="sPhone">家长手机</label>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <input type="input" class="form-control" id="sPhone" placeholder="请输入家长手机号" />
-                                    </div>
-                                    <div class="col-md-4 has-success">
-                                        <label class="control-label">
-                                            <i class="now-ui-icons ui-2_like"></i>正确！
-                                        </label>
+                                <div class="form-group">
+                                    <label for="sSex">性别</label>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <label class="form-control" id="sSex" disabled="">@(item.Sex==1?"男":"女")</label>
+                                        </div>
+                                        <div class="col-md-4 has-success">
+                                            <label class="control-label">
+                                                <i class="now-ui-icons ui-2_like"></i>正确！
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group" id="div_address">
-                                <label for="sPhone">现居住地</label>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <select class="form-control" id="counties">
-                                            <option>请选择县区</option>
-                                            <option>南关区</option>
-                                            <option>朝阳区</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <select class="form-control" id="policeStation">
-                                            <option>请选择派出所</option>
-                                            <option>南关区</option>
-                                            <option>朝阳区</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <select class="form-control" id="committee">
-                                            <option>请选择委</option>
-                                            <option>南关区</option>
-                                            <option>朝阳区</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <select class="form-control" id="street">
-                                            <option>请选择街/组</option>
-                                            <option>南关区</option>
-                                            <option>朝阳区</option>
-                                        </select>
+                                <div class="form-group">
+                                    <label for="sBirth">出生日期</label>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <label class="form-control" id="sBirth" disabled="">@item.BirthDay</label>
+                                        </div>
+                                        <div class="col-md-4 has-success">
+                                            <label class="control-label">
+                                                <i class="now-ui-icons ui-2_like"></i>正确！
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="sContact">联系人</label>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <input type="input" class="form-control" name="Contacts" id="sContact" placeholder="请输入联系人姓名" />
+                                        </div>
+                                        <div class="col-md-4 has-success">
+                                            <label class="control-label">
+                                                <i class="now-ui-icons ui-2_like"></i>正确！
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sPhone">家长手机</label>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <input type="input" class="form-control" name="ContactInfo" id="sPhone" placeholder="请输入家长手机号" />
+                                        </div>
+                                        <div class="col-md-4 has-success">
+                                            <label class="control-label">
+                                                <i class="now-ui-icons ui-2_like"></i>正确！
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="div_address" hidden="hidden">
+                                    <label for="sPhone">现居住地</label>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <select class="form-control" id="counties" name="CountiesNum">
+                                                <option>请选择县区</option>
+                                                <option>南关区</option>
+                                                <option>朝阳区</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <select class="form-control" id="policeStation" name="PoliceStationNum">
+                                                <option>请选择派出所</option>
+                                                <option>南关区</option>
+                                                <option>朝阳区</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <select class="form-control" id="committee" name="CommiteeNum">
+                                                <option>请选择委</option>
+                                                <option>南关区</option>
+                                                <option>朝阳区</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <select class="form-control" id="street" name="StreetNum">
+                                                <option>请选择街/组</option>
+                                                <option>南关区</option>
+                                                <option>朝阳区</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- <div class="form-group">
                                 <label for="sCheckCode">验证码</label>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <input type="input" class="form-control" id="sCheckCode" placeholder="请输入右侧图片的内容" />
                                     </div>
                                     <div class="col-md-4">
-                                        <span class="badge badge-success" style="font-size: 36px">3+7=?</span>
+                                        <img id="imgVerify" src="/Apply/ValidateCode" alt="看不清？点击更换" onclick="this.src = this.src + '?'" style="vertical-align:middle;" />
                                     </div>
                                     <div class="col-md-4 has-success">
                                         <label class="control-label">
@@ -140,9 +140,10 @@
                                         </label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="col-md-2"></div>
+                        <div class="col-md-3">
+                        </div>
                     </dvi>
                 </div>
                 <div class="footer text-center">
@@ -153,5 +154,4 @@
     </div>
 </div>
 @section FootJS{
-<script></script> 
-}
+<script></script> }

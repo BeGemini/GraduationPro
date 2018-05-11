@@ -56,7 +56,12 @@ namespace GraduationCore.Controllers
         private WarmPrompt GetWarmPrompt()
         {
             List<WarmPrompt> list=XmlHelper.GetXmlInstance<WarmPromptList>($"{ConfigsPath}/WarmPrompt.xml")as List<WarmPrompt>;
-            return list.Where(w=>w.Visible).FirstOrDefault();
+            var result= list.Where(w=>w.Visible).FirstOrDefault();
+            if(result==null)
+            {
+                result=new WarmPrompt();
+            }
+            return result;
         }
         public IActionResult IdentityConfirm()
         {

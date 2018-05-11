@@ -29,6 +29,7 @@ namespace GraduationCore.Common.Models.DataModels
         public string CurrentAddress{get;set;}//现居住地
 
         public DateTime EnterTime{get;set;}
+        
         public DateTime LastupdateTime{get;set;}//报名时间
 
         public string IP{get;set;}//报名IP

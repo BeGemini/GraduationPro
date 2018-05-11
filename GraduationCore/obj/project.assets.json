@@ -4845,6 +4845,23 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "ZKWeb.System.Drawing/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Threading.Thread": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ZKWeb.System.Drawing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ZKWeb.System.Drawing.dll": {}
+        }
       }
     }
   },
@@ -12811,6 +12828,17 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "ZKWeb.System.Drawing/4.0.0": {
+      "sha512": "lcw/HyN/nOstmAWFBnokLT/LXUbY3Dsu9VP4z/V7XIVHfM3V3/kORZ4DfYw2X9LdEYDO2xMX12kj/aZ5aIpLHw==",
+      "type": "package",
+      "path": "zkweb.system.drawing/4.0.0",
+      "files": [
+        "lib/net45/ZKWeb.System.Drawing.dll",
+        "lib/netstandard2.0/ZKWeb.System.Drawing.dll",
+        "zkweb.system.drawing.4.0.0.nupkg.sha512",
+        "zkweb.system.drawing.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -12820,7 +12848,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 2.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.1",
       "Microsoft.NETCore.App >= 2.0.0",
-      "MySql.Data.EntityFrameworkCore >= 8.0.10-rc"
+      "MySql.Data.EntityFrameworkCore >= 8.0.10-rc",
+      "ZKWeb.System.Drawing >= 4.0.0"
     ]
   },
   "packageFolders": {
@@ -12886,6 +12915,10 @@
           "MySql.Data.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.10-rc, )"
+          },
+          "ZKWeb.System.Drawing": {
+            "target": "Package",
+            "version": "[4.0.0, )"
           }
         },
         "imports": [

@@ -41,11 +41,11 @@ namespace GraduationCore.Common.Models.ViewModels
             }
         }
 
-        public DateTime BirthDay
+        public string BirthDay
         {
             get
             {
-                return Convert.ToDateTime($"{Year}-{Month}-{Day}");
+                return $"{Year}-{Month}-{Day}";
             }
         }
 

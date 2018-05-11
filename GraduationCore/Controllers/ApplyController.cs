@@ -2,6 +2,8 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using GraduationCore.Common.Models.ViewModels;
 using GraduationCore.Common.Helper;
+using GraduationCore.Common.Models.DataModels;
+using Microsoft.AspNetCore.Http;
 
 public class ApplyController : Controller
 {
@@ -20,7 +22,7 @@ public class ApplyController : Controller
             {
                 IdNumber id = new IdNumber(idNumber);
                 #region 与规定报名年限不符
-                if (id.BirthDay == DateTime.Now)
+                if (Convert.ToDateTime(id.BirthDay) == DateTime.Now)
                 {
                     result.Status = ResultStauts.Error;
                     result.Msg = "您的年龄与规定报名年限不符！如有疑问，请联系长春市教育局！";
@@ -47,7 +49,34 @@ public class ApplyController : Controller
         isLocal = DESEncryptHelper.DesDecrypt(isLocal);
         IdNumber id = new IdNumber(idNumber);
         id.IsLocal = int.Parse(isLocal);
-        ViewData["idNum"]=id;
+        ViewData["idNum"] = id;
         return View();
     }
+
+    public IActionResult ValidateCode()
+    {
+        RandomCodeHelper helper = new RandomCodeHelper();
+        string code = string.Empty;
+        System.IO.MemoryStream memoryStream = helper.Create(out code);
+        Response.Body.Dispose();
+        return File(memoryStream.ToArray(), @"image/png");
+    }
+
+    public ResultData<string> CheckStudentInfo(MStudents students)
+    {
+        ResultData<string> result=new ResultData<string>();
+        return result;
+    }
+
+    // [HttpPost]
+    // public async Task<IActionResult> InsertStudents(FormCollection collection)
+    // {
+    //     string id=collection["SIdentity"].ToString();
+    //     IdNumber idNumber=new IdNumber(id);
+    //     if(idNumber.Sex==1)
+    //     {
+    //         var students=await TryUpdateModelAsync<MStudents>(collection);
+    //     }
+    //     return Json("");
+    // }
 }
